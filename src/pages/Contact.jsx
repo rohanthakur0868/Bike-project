@@ -4,7 +4,7 @@ import Hero from "../components/Hero.jsx";
 function Contact() {
   return (
     <>
-    <Hero />
+    
     <section className="bg-black min-h-screen px-6 md:px-20 py-20 text-white">
       
       <div className="mb-16">
