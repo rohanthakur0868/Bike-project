@@ -9,12 +9,13 @@ import Rectangle3 from "../assets/Rectangle3.png";
 import Rectangle4 from "../assets/Rectangle4.png";
 import Rectangle5 from "../assets/Rectangle5.png";
 import Rectangle6 from "../assets/Rectangle6.png";
+import JoinCommunity from "../components/JoinCommunity.jsx";
 
 function Community() {
   return (
     <>
       <Hero />
-      <BikeCategories />
+      <JoinCommunity />
 
       <section className="w-full bg-white py-24 px-6 md:px-20">
         <div className="flex items-center mb-12">
