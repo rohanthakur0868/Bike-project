@@ -8,7 +8,7 @@ import Community from "./pages/Community.jsx";
 import Events from "./pages/Events.jsx";
 import Gallery from "./pages/Gallery.jsx";
 import Contact from "./pages/Contact.jsx";
-
+import Join from "./pages/Join.jsx";
 
 const App = () => {
   return (
@@ -23,6 +23,7 @@ const App = () => {
           <Route path="/events" element={<Events />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/join" element={<Join />} />
         </Routes>
       </div>
 
