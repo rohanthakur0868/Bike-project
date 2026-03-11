@@ -8,14 +8,14 @@ function Join({ onClose }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Form Submitted");
-    onClose(); // submit ke baad close
+    onClose(); 
   };
 
   return (
     <div className="fixed inset-0 z-[999] bg-black/70 flex items-center justify-center">
       <div className="relative bg-black p-8 rounded-xl w-full max-w-md border border-green-500">
 
-        {/* Close Button */}
+      
         <button
           onClick={onClose}
           className="absolute top-3 right-3 text-white text-xl"

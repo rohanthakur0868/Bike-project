@@ -28,6 +28,7 @@ function Navbar() {
           <li><Link to="/events">Events</Link></li>
           <li><Link to="/gallery">Gallery</Link></li>
           <li><Link to="/contact">Contact</Link></li>
+          
         </ul>
 
         <button
