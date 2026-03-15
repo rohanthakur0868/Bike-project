@@ -66,7 +66,7 @@ function BikeDetails() {
   return (
     <div className="pt-32 px-6 md:px-20 bg-gray-50 min-h-screen relative">
 
-      {/* Close Button */}
+  
       <button
         onClick={() => navigate(-1)}
         className="absolute top-24 right-10 text-3xl font-bold"
@@ -75,8 +75,6 @@ function BikeDetails() {
       </button>
 
       <div className="grid md:grid-cols-2 gap-12 items-center">
-
-        {/* Image Slider */}
         <div className="bg-white p-8 rounded-lg shadow text-center relative">
 
           <img
@@ -101,7 +99,7 @@ function BikeDetails() {
 
         </div>
 
-        {/* Bike Info */}
+      
         <div>
 
           <h1 className="text-4xl font-bold mb-4">

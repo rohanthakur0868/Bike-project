@@ -1,24 +1,48 @@
 import { useState } from "react";
 
 function Join({ onClose }) {
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [success, setSuccess] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Form Submitted");
-    onClose(); 
+
+    const newMember = {
+      name,
+      email,
+      phone,
+      joined: new Date().toLocaleString()
+    };
+
+    const members = JSON.parse(localStorage.getItem("members")) || [];
+
+    members.push(newMember);
+
+    localStorage.setItem("members", JSON.stringify(members));
+
+    setSuccess(true);
+
+    setName("");
+    setEmail("");
+    setPhone("");
+
+    setTimeout(() => {
+      onClose();
+    }, 1500);
   };
 
   return (
     <div className="fixed inset-0 z-[999] bg-black/70 flex items-center justify-center">
+
       <div className="relative bg-black p-8 rounded-xl w-full max-w-md border border-green-500">
 
-      
+        {/* CLOSE BUTTON */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-white text-xl"
+          className="absolute top-3 right-3 text-white text-xl hover:text-red-500"
         >
           ✕
         </button>
@@ -27,7 +51,14 @@ function Join({ onClose }) {
           Join Our Community
         </h2>
 
+        {success && (
+          <div className="bg-green-600 text-white text-center p-2 rounded mb-4">
+            Successfully Joined 🚀
+          </div>
+        )}
+
         <form onSubmit={handleSubmit}>
+
           <input
             type="text"
             placeholder="Name"
@@ -57,10 +88,11 @@ function Join({ onClose }) {
 
           <button
             type="submit"
-            className="w-full py-2 bg-green-500 rounded font-bold text-black"
+            className="w-full py-2 bg-green-500 rounded font-bold text-black hover:bg-green-400 transition"
           >
             Join Now
           </button>
+
         </form>
       </div>
     </div>
